@@ -539,8 +539,8 @@ begin
         s_axis_data_tready => open,
         s_axis_data_tdata => filter1_Q_tdata(16 downto 1),
         m_axis_data_tvalid => filter2_Q_tvalid,
-        m_axis_data_tdata(23 downto 8) => m_axis_tdata(15 downto 0),
-        m_axis_data_tdata(7 downto 0) => filter2_Q_tdata
+        m_axis_data_tdata(15 downto 0) => m_axis_tdata(15 downto 0),
+        m_axis_data_tdata(23 downto 16) => filter2_Q_tdata
       );                        
     
     reset_n <= not slv_reg2(0);
